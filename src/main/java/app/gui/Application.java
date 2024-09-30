@@ -43,7 +43,7 @@ public class Application {
         // Initial setup for the program.
         // The config hides the details of which implementation of GradeDB
         // we are using in the program. If we were to use a different implementation
-        // of GradeDB, this config is what we would change.
+        // of GradeDB, this config is what we would change.1
         final Config config = new Config();
 
         final GetGradeUseCase getGradeUseCase = config.getGradeUseCase();
@@ -53,6 +53,7 @@ public class Application {
         final LeaveTeamUseCase leaveTeamUseCase = config.leaveTeamUseCase();
         final GetAverageGradeUseCase getAverageGradeUseCase = config.getAverageGradeUseCase();
         final GetTopGradeUseCase getTopGradeUseCase = config.getTopGradeUseCase();
+
 
         // this is the code that runs to set up our GUI
         SwingUtilities.invokeLater(() -> {
