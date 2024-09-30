@@ -261,6 +261,9 @@ public class MongoGradeDataBase implements GradeDataBase {
         catch (IOException | JSONException event) {
             throw new RuntimeException(event);
         }
-        return formTeam(responseBody.getJSONObject("team").getString(NAME));
+        return Team.builder()
+                .name(responseBody.getString(NAME))
+                .members(new String[]{})
+                .build();
     }
 }
